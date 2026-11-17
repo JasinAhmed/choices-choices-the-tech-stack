@@ -1,0 +1,17 @@
+<section id="waarde-levering" class="value">
+	<hgroup>
+		<span>{{ value.subtitle }}</span>
+		<h2>{{ value.title }}</h2>
+	</hgroup>
+
+	<dl>
+		{% for item in value.values %}
+			<dt>{{ item.title }}</dt>
+			<dd>{{ item.description }}</dd>
+		{% endfor %}
+	</dl>
+
+	<picture>
+		<img src="{{ value.image }}" alt="" loading="lazy" />
+	</picture>
+</section>

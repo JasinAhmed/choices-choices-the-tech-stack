@@ -1,0 +1,21 @@
+<section id="partners" class="partners">
+	<header>
+		<hgroup>
+			<span>{{ partners.subtitle }}</span>
+			<h2>{{ partners.title }}</h2>
+			<p>{{ partners.description }}</p>
+		</hgroup>
+	</header>
+
+	<ul class="cards">
+		{% for partner in partners.partners %}
+			<li>
+				<article class="partner-card">
+					<span class="icon" style="--icon: url({{ partner.image }})" aria-hidden="true"></span>
+					<h3>{{ partner.title }}</h3>
+					<p>{{ partner.description }}</p>
+				</article>
+			</li>
+		{% endfor %}
+	</ul>
+</section>

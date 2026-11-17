@@ -1,0 +1,17 @@
+<section class="demo-section">
+	<div class="demo-content">
+		<span class="demo-label">{{ demo.subtitle }}</span>
+		<h2>{{ demo.title }}</h2>
+		<p class="demo-description">{{ demo.description }}</p>
+
+		<ol>
+			{% for item in demo.items %}
+				<li>{{ item.title }}</li>
+			{% endfor %}
+		</ol>
+
+		<a class="button footer demo-contact" href="mailto:frank.kloos@fonetic.studio">frank.kloos@fonetic.studio</a>
+
+		<p class="demo-note">{{ demo.note }}</p>
+	</div>
+</section>

@@ -1,12 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="{{ lang }}">
 	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="text-scale" content="scale" />
+		<meta name="description" content="{{ description }}" />
+
 		<title>{{ title }}</title>
+
+		<link rel="alternate" hreflang="nl" href="/" />
+		<link rel="alternate" hreflang="en" href="/en/" />
+		<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+		<link rel="stylesheet" href="/css/style.css" />
+		<script src="/js/main.js" defer></script>
 	</head>
+
 	<body>
-        {% include "partials/site-head.html" %}
-		<main tabindex="-1" id="main-content"></main>
+		<a class="skip-link" href="#main-content">{{ ui.skipLink }}</a>
+
+		{% include "partials/navigation.html" %}
+
+		<main id="main-content" tabindex="-1">
+			{% block content %}{{ content | safe }}{% endblock %}
+		</main>
+
+		{% include "partials/site-footer.html" %}
 	</body>
 </html>

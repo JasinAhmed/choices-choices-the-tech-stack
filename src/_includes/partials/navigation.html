@@ -1,0 +1,44 @@
+<header class="nav-bar visible">
+	<div class="logo">
+		<a class="logo-link" href="{% if lang == 'en' %}/en/{% else %}/{% endif %}">
+			<picture>
+				<source srcset="/assets/full-logo-white.svg" media="(prefers-color-scheme: dark)" />
+				<img src="/assets/full-logo.svg" alt="Prologg logo" width="100" height="70" fetchpriority="high" />
+			</picture>
+		</a>
+
+		<div class="mobile-menu">
+			<a class="button nav" href="mailto:frank.kloos@fonetic.studio">{{ navigation.button }}</a>
+
+			<!-- The popover API opens the menu without JavaScript. -->
+			<button type="button" class="hamburger" popovertarget="main-nav" aria-label="{{ ui.menu }}">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+		</div>
+
+		<nav class="main-nav" id="main-nav" popover aria-label="{{ ui.navigation }}">
+			<div class="mobile-menu-top">
+				<button type="button" class="close-button" popovertarget="main-nav" popovertargetaction="hide">
+					<img src="/assets/close-icon.svg" alt="{{ ui.closeMenu }}" width="24" height="24" />
+				</button>
+			</div>
+
+			{% for link in navigation.links %}
+				<a class="nav-link" href="{{ link.href }}">
+					{{ link.content }}
+					<span class="underline-deco"></span>
+				</a>
+			{% endfor %}
+
+			<!-- Each language is its own page, so the toggle is a plain link. -->
+			<a class="language-toggle" href="{{ language.href }}" hreflang="{{ language.code }}" aria-label="{{ language.label }}">
+				<span{% if lang == "nl" %} class="is-active"{% endif %}>NL</span>
+				<span{% if lang == "en" %} class="is-active"{% endif %}>EN</span>
+			</a>
+
+			<a class="button nav" href="mailto:frank.kloos@fonetic.studio">{{ navigation.button }}</a>
+		</nav>
+	</div>
+</header>

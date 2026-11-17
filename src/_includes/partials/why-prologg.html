@@ -1,0 +1,17 @@
+<section id="waarom-prologg" class="why-section">
+	<div class="why-content">
+		<header>
+			<hgroup>
+				<span>{{ why.subtitle }}</span>
+				<h2>{{ why.title }}</h2>
+			</hgroup>
+		</header>
+
+		<dl class="why-reasons">
+			{% for reason in why.reasons %}
+				<dt>{{ reason.title }}</dt>
+				<dd>{{ reason.description }}</dd>
+			{% endfor %}
+		</dl>
+	</div>
+</section>

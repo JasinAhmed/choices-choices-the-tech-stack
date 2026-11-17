@@ -10,6 +10,7 @@ ui:
   menu: "Menu"
   navigation: "Navigatie"
   contact: "Contact"
+  closeMenu: "Sluit menu"
 
 language:
   text: "EN"
@@ -70,6 +71,11 @@ preview:
       subtitle: "Overdragen"
       title: "De werknemer bepaalt wanneer het dossier naar u gaat."
       description: "De werknemer bepaalt wanneer en aan wie. U ontvangt het dossier via een beveiligde omgeving."
+  banner:
+    label: "Open source fundament"
+    tag: "Geauditeerd"
+    highlight: "Gebouwd op GlobaLeaks:"
+    text: "de beproefde open source standaard voor vertrouwelijke en cryptografisch beveiligde data-overdracht, onafhankelijk geauditeerd."
 
 getInvolved:
   title: "Twee manieren om Prologg verder te brengen."
@@ -120,6 +126,7 @@ demo:
   items:
     - title: "Hoe clienten veilig bewijs kunnen opslaan."
     - title: "Hoe een dossier binnenkomt en hoe u het controleert."
+  note: "Prologg for Legal · Forensische Keten van Bewijs · Ontwikkeld voor gespecialiseerde rechtspraktijken"
 
 footer:
   title: "Prologg for Legal"

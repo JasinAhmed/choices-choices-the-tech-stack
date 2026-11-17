@@ -1,0 +1,10 @@
+<section class="hero">
+	<h1>{{ hero.title }}</h1>
+	<p>{{ hero.description }}</p>
+
+	<div class="button-wrapper">
+		{% for button in hero.buttons %}
+			<a class="button {{ button.variant }}" href="{{ button.href }}">{{ button.content }}</a>
+		{% endfor %}
+	</div>
+</section>

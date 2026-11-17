@@ -1,0 +1,20 @@
+<section id="doe-mee" class="involved">
+	<div>
+		<hgroup>
+			<span>{{ getInvolved.subtitle }}</span>
+			<h2>{{ getInvolved.title }}</h2>
+		</hgroup>
+
+		<ol>
+			{% for card in getInvolved.cards %}
+				<li>
+					<article>
+						<p class="number">{{ card.number }}</p>
+						<h3>{{ card.title }}</h3>
+						<p class="description">{{ card.description }}</p>
+					</article>
+				</li>
+			{% endfor %}
+		</ol>
+	</div>
+</section>

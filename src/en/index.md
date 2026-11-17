@@ -10,6 +10,7 @@ ui:
   menu: "Menu"
   navigation: "Navigation"
   contact: "Contact"
+  closeMenu: "Close menu"
 
 language:
   text: "NL"
@@ -70,6 +71,11 @@ preview:
       subtitle: "Hand over"
       title: "The worker decides when the case file goes to you."
       description: "The worker decides when and to whom. You receive the case file through a secure environment."
+  banner:
+    label: "Open source foundation"
+    tag: "Audited"
+    highlight: "Built on GlobaLeaks:"
+    text: "the proven open source standard for confidential and cryptographically secured data transfer, independently audited."
 
 getInvolved:
   title: "Two ways to take Prologg further."
@@ -120,6 +126,7 @@ demo:
   items:
     - title: "How clients can store evidence safely."
     - title: "How a case file comes in and how you check it."
+  note: "Prologg for Legal · Forensic Chain of Evidence · Developed for specialised legal practices"
 
 footer:
   title: "Prologg for Legal"
