@@ -1,0 +1,41 @@
+.preview {
+  background-color: var(--background-color-secondary);
+  display: grid;
+}
+
+.grid {
+  @media (width > 890px) {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    justify-self: center;
+    max-width: var(--max-width);
+  }
+}
+
+.info {
+  padding: 0;
+  grid-column: span 2;
+
+  @media (width > 890px) {
+    padding: 1rem 1rem 1rem 3.5rem;
+  }
+}
+
+.phone {
+  display: grid;
+  padding: var(--space-lg) var(--space-md);
+
+  & img {
+    max-width: 20rem;
+    width: 100%;
+    padding: 0.5rem;
+    filter: var(--filter-shadow-card);
+    display: flex;
+    justify-self: center;
+
+    @media (width > 890px) {
+      margin-inline: 3rem;
+      place-self: center;
+    }
+  }
+}

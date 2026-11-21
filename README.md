@@ -28,7 +28,25 @@ De instructie vind je in de [Wiki](https://github.com/fdnd-task/choices-choices-
 
 ## Installatie
 
+Prototype van de Prologg-site, nagebouwd met **Next.js (App Router) + React** in plaats van SvelteKit.
+
+```bash
+npm install
+npm run dev     # http://localhost:3000
+npm run build   # statische export naar /out
+```
+
 ## Gebruik
+
+| SvelteKit | Next.js / React |
+| --- | --- |
+| `src/routes/+layout.svelte` / `+page.svelte` | `app/layout.js` / `app/page.js` |
+| `src/lib/atoms`, `molecules`, `organisms` | `components/atoms`, `molecules`, `organisms` |
+| Scoped `<style>` in `.svelte` | CSS Modules (`*.module.css`) |
+| `lang.svelte.js` (`$state`) | `components/LangProvider.js` (React Context) |
+| `content.js` met `?raw` imports | `lib/content.js` leest `content/*/content.md` met `fs` tijdens de build |
+| `static/` | `public/` |
+| `adapter-static` + `prerender` | `output: "export"` in `next.config.mjs` |
 
 ## Bronnen
 

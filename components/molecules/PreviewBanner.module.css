@@ -1,0 +1,62 @@
+.banner {
+  font-family: var(--font-heading);
+  grid-column: span 2;
+  max-width: max-content;
+  place-self: center;
+  margin: 0.5rem;
+  padding: 1rem;
+  border-radius: 16px;
+  background-color: var(--background-color-primary);
+
+  @media (width > 486px) {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+
+.svgWrapper {
+  height: 2.5rem;
+  width: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background-color: var(--background-color-secondary);
+
+  @media (prefers-color-scheme: dark) {
+    & path {
+      fill: var(--alert-color);
+    }
+  }
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-block: 0.5rem;
+  color: var(--alert-color);
+}
+
+.decoDot {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background-color: var(--alert-color);
+}
+
+.subTitle {
+  font-family: var(--font-heading);
+}
+
+.text {
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  max-width: 50rem;
+
+  & span {
+    font-family: var(--font-heading);
+    font-weight: bold;
+  }
+}
