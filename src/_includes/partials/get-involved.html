@@ -12,6 +12,11 @@
 						<p class="number">{{ card.number }}</p>
 						<h3>{{ card.title }}</h3>
 						<p class="description">{{ card.description }}</p>
+						{% if card.button %}
+							<div class="cta-wrapper">
+								<a class="button cta" href="{{ card.button.href }}">{{ card.button.content }}</a>
+							</div>
+						{% endif %}
 					</article>
 				</li>
 			{% endfor %}

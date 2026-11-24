@@ -3,18 +3,16 @@
 		<a class="logo-link" href="{% if lang == 'en' %}/en/{% else %}/{% endif %}">
 			<picture>
 				<source srcset="/assets/full-logo-white.svg" media="(prefers-color-scheme: dark)" />
-				<img src="/assets/full-logo.svg" alt="Prologg logo" width="100" height="70" fetchpriority="high" />
+				<img src="/assets/full-logo.svg" alt="{{ navigation.logoAlt }}" width="100" height="70" fetchpriority="high" />
 			</picture>
 		</a>
 
 		<div class="mobile-menu">
-			<a class="button nav" href="mailto:frank.kloos@fonetic.studio">{{ navigation.button }}</a>
+			<a class="button nav" href="mailto:{{ contact.email }}">{{ navigation.button }}</a>
 
 			<!-- The popover API opens the menu without JavaScript. -->
-			<button type="button" class="hamburger" popovertarget="main-nav" aria-label="{{ ui.menu }}">
-				<span></span>
-				<span></span>
-				<span></span>
+			<button type="button" class="hamburger" popovertarget="main-nav">
+				<img src="/assets/hamburger.svg" alt="{{ ui.menu }}" width="50" height="50" />
 			</button>
 		</div>
 
@@ -38,7 +36,7 @@
 				<span{% if lang == "en" %} class="is-active"{% endif %}>EN</span>
 			</a>
 
-			<a class="button nav" href="mailto:frank.kloos@fonetic.studio">{{ navigation.button }}</a>
+			<a class="button nav" href="mailto:{{ contact.email }}">{{ navigation.button }}</a>
 		</nav>
 	</div>
 </header>

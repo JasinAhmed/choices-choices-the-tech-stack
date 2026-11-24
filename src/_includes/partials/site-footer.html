@@ -4,7 +4,7 @@
 			<a href="{% if lang == 'en' %}/en/{% else %}/{% endif %}" class="footer-logo">
 				<picture>
 					<source srcset="/assets/full-logo-white.svg" media="(prefers-color-scheme: dark)" />
-					<img src="/assets/full-logo.svg" alt="Prologg logo" width="100" height="70" fetchpriority="low" loading="lazy" />
+					<img src="/assets/full-logo.svg" alt="{{ navigation.logoAlt }}" width="100" height="70" fetchpriority="low" loading="lazy" />
 				</picture>
 			</a>
 
@@ -30,16 +30,16 @@
 			<h2 class="footer-heading">{{ ui.contact }}</h2>
 
 			<address>
-				<a href="mailto:frank.kloos@fonetic.studio" class="footer-link">frank.kloos@fonetic.studio</a>
+				<a href="mailto:{{ contact.email }}" class="footer-link">{{ contact.email }}</a>
 			</address>
 
 			<div class="footer-demo">
-				<a class="button nav" href="mailto:frank.kloos@fonetic.studio">{{ navigation.button }}</a>
+				<a class="button nav" href="mailto:{{ contact.email }}">{{ navigation.button }}</a>
 			</div>
 		</div>
 	</div>
 
 	<div class="footer-bottom">
-		<p>&copy; Prologg for Legal</p>
+		<p>&copy; {{ footer.title }}</p>
 	</div>
 </footer>

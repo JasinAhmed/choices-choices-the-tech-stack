@@ -18,8 +18,12 @@ language:
   href: "/"
   code: "nl"
 
+contact:
+  email: "frank.kloos@fonetic.studio"
+
 navigation:
   button: "Request demo"
+  logoAlt: "Prologg, go to homepage"
   links:
     - content: "Why Prologg"
       href: "#waarom-prologg"
@@ -35,6 +39,10 @@ navigation:
 hero:
   title: "Evidence of exploitation, captured by the people who live it."
   description: "Collect evidence safely and anonymously with a phone. For lawyers handling labour exploitation cases."
+  imageWebpFallback: "/images/hero-img.webp"
+  imageWebp: "/images/hero-img-05x.webp 355w, /images/hero-img.webp 710w"
+  imageAvif: "/images/hero-img-05x.avif 355w, /images/hero-img.avif 710w"
+  imageAlt: "Person logging evidence with the Prologg web app"
   buttons:
     - content: "Request a demo for your firm"
       href: "mailto:frank.kloos@fonetic.studio"
@@ -84,9 +92,15 @@ getInvolved:
     - number: "1"
       title: "Support further development"
       description: "Join the crowdfunding campaign. With your contribution we will build the secure back end, have the app independently audited, and test the translations with the target group itself."
+      button:
+        content: "Go to crowdfunding"
+        href: "#"
     - number: "2"
       title: "Become a Prologg for Lawyers customer"
-      description: "Receive case files from your clients in a secure environment for your firm. Subscriptions from [amount] per month."
+      description: "Receive case files from your clients in a secure environment for your firm."
+      button:
+        content: "Contact form"
+        href: "mailto:frank.kloos@fonetic.studio"
 
 value:
   subtitle: "What it gives you"

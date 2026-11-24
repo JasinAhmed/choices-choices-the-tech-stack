@@ -18,8 +18,12 @@ language:
   href: "/en/"
   code: "en"
 
+contact:
+  email: "frank.kloos@fonetic.studio"
+
 navigation:
   button: "Vraag demo aan"
+  logoAlt: "Prologg, ga naar hoofdpagina"
   links:
     - content: "Waarom Prologg"
       href: "#waarom-prologg"
@@ -35,6 +39,10 @@ navigation:
 hero:
   title: "Bewijs van uitbuiting, vastgelegd door wie het meemaakt."
   description: "Veilig en anoniem bewijs verzamelen met een telefoon. Voor advocaten in zaken rond arbeidsuitbuiting."
+  imageWebpFallback: "/images/hero-img.webp"
+  imageWebp: "/images/hero-img-05x.webp 355w, /images/hero-img.webp 710w"
+  imageAvif: "/images/hero-img-05x.avif 355w, /images/hero-img.avif 710w"
+  imageAlt: "Persoon legt bewijs vast met de Prologg webapp"
   buttons:
     - content: "Vraag kantoordemo aan"
       href: "mailto:frank.kloos@fonetic.studio"
@@ -84,9 +92,15 @@ getInvolved:
     - number: "1"
       title: "Steun de doorontwikkeling"
       description: "Doe mee aan de crowdfunding. Met uw bijdrage bouwen we de beveiligde back-end, laten we de app onafhankelijk doorlichten en testen we de vertalingen met de doelgroep zelf."
+      button:
+        content: "Naar crowdfunding"
+        href: "#"
     - number: "2"
       title: "Word klant van Prologg voor advocaten"
-      description: "Ontvang dossiers van cliënten in een beveiligde omgeving voor uw kantoor. Abonnementen vanaf [bedrag] per maand."
+      description: "Ontvang dossiers van cliënten in een beveiligde omgeving voor uw kantoor."
+      button:
+        content: "Contactformulier"
+        href: "mailto:frank.kloos@fonetic.studio"
 
 value:
   subtitle: "Wat het u oplevert"
