@@ -15,6 +15,8 @@ export default function Head(state) {
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="description" content="${esc(description)}">
       <title>${esc(pageTitle)}</title>
+      <link rel="alternate" hreflang="nl" href="/">
+      <link rel="alternate" hreflang="en" href="/en/">
       <link rel="icon" href="/_public/favicon.svg" type="image/svg+xml">
       <link rel="preload" href="/_public/fonts/Inter-VariableFont_opsz,wght.ttf" as="font" type="font/ttf" crossorigin>
       <link rel="stylesheet" href="/_public/global.css">

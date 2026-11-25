@@ -3,11 +3,14 @@
   "version": "0.0.1",
   "scripts": {
     "start": "npx enhance dev",
-    "lint": "eslint ./app/**/*.mjs --fix"
+    "lint": "eslint ./app/**/*.mjs --fix",
+    "build": "node scripts/build.mjs"
   },
   "dependencies": {
     "@enhance/arc-plugin-enhance": "^11.0.4",
-    "yaml": "^2.9.1"
+    "yaml": "^2.9.1",
+    "@enhance/ssr": "^4.0.3",
+    "@enhance/enhance-style-transform": "^0.1.2"
   },
   "devDependencies": {
     "@enhance/cli": "^1.2.1",

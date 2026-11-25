@@ -1,5 +1,5 @@
-// Taalwissel als gewone link (?lang=en / ?lang=nl): werkt zonder JavaScript.
-// De server (app/api/index.mjs) onthoudt de keuze in de sessie.
+// Taalwissel als gewone link naar / (NL) of /en/ (EN): werkt zonder JavaScript,
+// en ook op de statische Netlify-build.
 // In React was dit een checkbox + useState + localStorage.
 export default function LangToggle({ html, state }) {
   const lang = state.store.lang || 'nl'
@@ -37,7 +37,7 @@ export default function LangToggle({ html, state }) {
         outline-offset: 4px;
       }
     </style>
-    <a class="toggle" href="?lang=${next}" hreflang="${next}" aria-label="${label}">
+    <a class="toggle" href="${next === 'en' ? '/en/' : '/'}" hreflang="${next}" aria-label="${label}">
       <span class="${lang === 'nl' ? 'current' : ''}">NL</span>
       <span class="${lang === 'en' ? 'current' : ''}">EN</span>
     </a>
