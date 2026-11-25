@@ -1,0 +1,33 @@
+{
+  "name": "myproject",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "npx enhance dev",
+    "lint": "eslint ./app/**/*.mjs --fix"
+  },
+  "dependencies": {
+    "@enhance/arc-plugin-enhance": "^11.0.4",
+    "yaml": "^2.9.1"
+  },
+  "devDependencies": {
+    "@enhance/cli": "^1.2.1",
+    "eslint": "^8.49.0"
+  },
+  "eslintConfig": {
+    "env": {
+      "node": true
+    },
+    "extends": "eslint:recommended",
+    "rules": {
+      "indent": [
+        "error",
+        2
+      ]
+    },
+    "ignorePatterns": [],
+    "parserOptions": {
+      "sourceType": "module",
+      "ecmaVersion": 2022
+    }
+  }
+}

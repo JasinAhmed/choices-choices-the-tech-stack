@@ -1,0 +1,32 @@
+<style scope="global">
+  .skip-link {
+    position: absolute;
+    left: 1rem;
+    top: -100%;
+    z-index: 100;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    background-color: var(--background-color-primary);
+    color: var(--color-text-primary);
+  }
+
+  .skip-link:focus {
+    top: 1rem;
+  }
+</style>
+
+<a class="skip-link" href="#main-content">Ga naar de inhoud</a>
+
+<site-nav></site-nav>
+
+<main id="main-content" tabindex="-1">
+  <hero-section></hero-section>
+  <why-section></why-section>
+  <preview-section></preview-section>
+  <value-section></value-section>
+  <involved-section></involved-section>
+  <partners-section></partners-section>
+  <demo-section></demo-section>
+</main>
+
+<site-footer></site-footer>
