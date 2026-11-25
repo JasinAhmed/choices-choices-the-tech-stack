@@ -15,6 +15,3 @@ sam.json
 sam.yaml
 
 .DS_Store
-
-# Statische Netlify-build
-build/

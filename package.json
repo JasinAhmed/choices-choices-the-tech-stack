@@ -1,19 +1,18 @@
 {
-  "name": "myproject",
+  "name": "prologg",
   "version": "0.0.1",
   "scripts": {
     "start": "npx enhance dev",
-    "lint": "eslint ./app/**/*.mjs --fix",
-    "build": "node scripts/build.mjs"
+    "lint": "eslint ./app/**/*.mjs --fix"
   },
   "dependencies": {
     "@enhance/arc-plugin-enhance": "^11.0.4",
-    "yaml": "^2.9.1",
-    "@enhance/ssr": "^4.0.3",
-    "@enhance/enhance-style-transform": "^0.1.2"
+    "@enhance/arc-plugin-styles": "^5.0.5",
+    "@enhance/styles-cribsheet": "^0.0.11"
   },
   "devDependencies": {
     "@enhance/cli": "^1.2.1",
+    "@enhance/types": "^0.7.0",
     "eslint": "^8.49.0"
   },
   "eslintConfig": {

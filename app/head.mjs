@@ -1,25 +1,28 @@
-// De <head> van elke pagina. `store` is wat app/api/index.mjs als json teruggeeft
-// (aangevuld met preflight), dus taal en content zijn hier beschikbaar.
-import { esc } from './lib/escape.mjs'
+import { getStyles } from '@enhance/arc-plugin-styles'
 
 export default function Head(state) {
   const { store = {} } = state
-  const { pageTitle = 'Prologg for Legal', lang = 'nl', c } = store
-  const description = c?.hero?.description || ''
+
+  // pageTitle is set in /app/preflight.mjs
+  const { pageTitle = '' } = store
+
+  // Enhance Styles
+  // CSS will be included as a <link> tag for local development.
+  // For deployments, CSS will be included as a <style> tag in order to eliminate the blocking network request created by <link> tags.
+  const styles = process.env.ARC_LOCAL
+    ? getStyles.linkTag()
+    : getStyles.styleTag()
 
   return `
     <!DOCTYPE html>
-    <html lang="${esc(lang)}">
+    <html lang="en">
     <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="description" content="${esc(description)}">
-      <title>${esc(pageTitle)}</title>
-      <link rel="alternate" hreflang="nl" href="/">
-      <link rel="alternate" hreflang="en" href="/en/">
-      <link rel="icon" href="/_public/favicon.svg" type="image/svg+xml">
-      <link rel="preload" href="/_public/fonts/Inter-VariableFont_opsz,wght.ttf" as="font" type="font/ttf" crossorigin>
-      <link rel="stylesheet" href="/_public/global.css">
+      <title>${pageTitle}</title>
+      ${styles}
+      <link rel="icon" href="/_public/favicon.svg">
+      <meta name="description" content="The HTML first full stack web framework.">
     </head>
-  `
+`
 }
