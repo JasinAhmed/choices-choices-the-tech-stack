@@ -2,7 +2,7 @@
   "name": "prologg",
   "version": "0.0.1",
   "scripts": {
-    "start": "npx enhance dev",
+    "start": "node scripts/dev.mjs",
     "lint": "eslint ./app/**/*.mjs --fix"
   },
   "dependencies": {
